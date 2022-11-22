@@ -3,7 +3,7 @@ import thunk from 'redux-thunk';
 import rocketReducer from './rockets/rockets';
 
 const allReducers = combineReducers({
-  coins: rocketReducer,
+  rockets: rocketReducer,
 });
 
 const store = configureStore({ reducer: allReducers }, applyMiddleware(thunk));
