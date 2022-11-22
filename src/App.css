@@ -1,10 +1,42 @@
-.logoimg {
-  width: 50px;
-}
-
 * {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+body {
+  font-family: 'Roboto', 'Poppins', sans-serif;
+}
+
+section {
+  min-height: calc(100vh - 99px);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  font-size: 18px;
+}
+
+table,
+th,
+td {
+  border: 1px solid #e2e5e9;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(12%);
+}
+
+.logoimg {
+  width: 50px;
 }
 
 .pending {
@@ -28,12 +60,24 @@
   padding: 24px 5%;
 }
 
+.nav-link {
+  color: #0d81ff;
+}
+
+.nav-link:hover {
+  color: #075ebc;
+}
+
+.active {
+  color: #075ebc;
+  text-decoration: underline;
+}
+
 .navFst {
   display: flex;
   gap: 10px;
   align-items: center;
   font-size: 18px;
-  font-family: sans-serif;
 }
 
 .nav-sec {
@@ -47,11 +91,6 @@
   background: #111;
 }
 
-.Link {
-  text-decoration: none;
-  font-size: 18px;
-}
-
 .rocketImg {
   width: 250px;
   height: auto;
@@ -62,7 +101,6 @@
   gap: 10px;
   padding: 12px 24px;
   flex-direction: column;
-  font-family: sans-serif;
 }
 
 .rocketDivSm {
@@ -82,4 +120,89 @@
 .rocketDiv {
   display: flex;
   gap: 10px;
+}
+
+/* ........... Missions Page ............ */
+
+.missions-section {
+  padding: 1rem 3rem;
+}
+
+.missions-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.missions-table td,
+th {
+  padding: 0.7rem;
+}
+
+.missions-table tr:nth-child(2) {
+  border-bottom-color: transparent;
+}
+
+.missions-table tr:nth-child(2n) {
+  background-color: #f2f2f2;
+}
+
+.mission-details td:nth-child(2) {
+  width: 70%;
+}
+
+.join-btn {
+  background-color: transparent;
+  padding: 0.6rem 0.7rem;
+  margin: 0 auto;
+  display: block;
+  border: 1.8px solid #666b6f;
+  border-radius: 0.3rem;
+}
+
+.member-badge {
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+  background-color: #6d757d;
+  color: #fff;
+  padding: 0.15rem 0.5rem;
+  border-radius: 0.2rem;
+}
+
+/* ............ User Profile ............ */
+
+.missions-container {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.missions-container header {
+  font-size: 2rem;
+  margin-bottom: 0.9rem;
+}
+
+.missions-column,
+.rockets-column {
+  padding: 1rem;
+  height: auto;
+  width: 40%;
+  border-radius: 0.5rem;
+}
+
+.column-items {
+  border-radius: 0.2rem;
+  border: 1px solid rgb(201, 200, 200);
+  box-shadow: 2px 2px 3px rgba(111, 110, 110, 0.09);
+}
+
+.column-item {
+  border-bottom: 1px solid rgb(201, 200, 200);
+  padding: 1rem 1rem;
+  font-size: 1.1rem;
+}
+
+.column-item:last-child {
+  border-bottom: none;
 }
