@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import logo from '../assets/saturn.png';
 
 const Navbar = () => (
@@ -8,10 +8,16 @@ const Navbar = () => (
       <h1>Space Hub</h1>
     </div>
     <div className="nav-sec">
-      <Link className="Link" to="./">Rockets</Link>
-      <Link className="Link" to="./missions">Missions</Link>
+      <NavLink className="nav-link" to="./">
+        Rockets
+      </NavLink>
+      <NavLink className="nav-link" to="./missions">
+        Missions
+      </NavLink>
       <p className="horizontal" />
-      <Link className="Link" to="./profile">User-Profile</Link>
+      <NavLink className="nav-link" to="./profile">
+        My Profile
+      </NavLink>
     </div>
   </div>
 );

@@ -2,8 +2,8 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/navbar';
 import Rockets from './components/rockets';
-import Missions from './components/missions';
-import Profile from './components/userProfile';
+import Missions from './pages/missions';
+import Profile from './pages/userProfile';
 
 function App() {
   return (
