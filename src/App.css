@@ -37,6 +37,18 @@ button:hover {
 
 .logoimg {
   width: 50px;
+
+.pending {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pending p {
+  font-size: 20px;
+  font-weight: 500;
+  color: blue;
 }
 
 .nav {
