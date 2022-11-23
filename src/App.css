@@ -8,6 +8,30 @@ body {
   font-family: 'Roboto', 'Poppins', sans-serif;
 }
 
+.reserved {
+  font-weight: 600;
+}
+
+.round {
+  height: 50px;
+  width: 50px;
+  border-right: 5px solid #111;
+  border-left: 5px solid #111;
+  border-bottom: 5px solid #111;
+  border-radius: 50%;
+  animation: round 2s infinite linear;
+}
+
+@keyframes round {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 section {
   min-height: calc(100vh - 99px);
 }
@@ -44,6 +68,7 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .pending p {

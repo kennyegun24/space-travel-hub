@@ -1,35 +1,53 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchRockets } from '../Redux/rockets/rockets';
+import { fetchRockets, rocketBooking } from '../Redux/rockets/rockets';
 
 const Rockets = () => {
   const dispatch = useDispatch();
   const { rockets, status } = useSelector((state) => state.rockets);
   useEffect(() => {
-    dispatch(fetchRockets());
-  }, []);
+    if (status === null) {
+      dispatch(fetchRockets());
+    }
+  }, [status, dispatch]);
+
+  const handleBookings = (id) => {
+    dispatch(rocketBooking(id));
+  };
 
   return (
     <div className="rocket">
       {status === 'pending' ? (
         <div className="pending">
-          <p>Loading...</p>
+          <p className="round" />
+          <p>LOADING...</p>
         </div>
       ) : (
         <>
-          {rockets.map((rocket) => (
-            <div className="rocketDiv" key={rocket.rocket_id}>
+          {rockets.map((
+            {
+              rocketName, rocketDesc, id, rocketImages, reserved,
+            },
+          ) => (
+            <div className="rocketDiv" key={id}>
               <div>
-                <img src={rocket.flickr_images[0]} className="rocketImg" alt="" />
+                <img src={rocketImages} className="rocketImg" alt="" />
               </div>
               <div className="rocketDivSm">
                 <h2>
-                  {rocket.rocket_name}
+                  {rocketName}
                 </h2>
+                {reserved ? <span className="reserved">Reserved </span> : ''}
                 <p>
-                  {rocket.description}
+                  {rocketDesc}
                 </p>
-                <button type="button" className="rocketBtn">Reserve Rocket</button>
+                <button
+                  type="button"
+                  onClick={() => { handleBookings(id); }}
+                  className="rocketBtn"
+                >
+                  {reserved ? 'Cancel Reservations' : 'Reserve Rockets'}
+                </button>
               </div>
             </div>
           ))}
