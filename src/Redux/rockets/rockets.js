@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  rockets: [],
+  rocket: [],
   status: null,
 };
 
@@ -17,11 +17,13 @@ const rocketSlice = createSlice({
   reducers: {
     rocketBooking: (state, action) => {
       const myState = state;
-      const newState = myState.rockets.map((rocket) => {
-        if (rocket.id !== action.payload) return rocket;
-        return { ...rocket, reserved: !rocket.reserved };
+      const newState = myState.rocket.map((rock) => {
+        if (rock.id !== action.payload) {
+          return rock;
+        }
+        return { ...rock, reserved: !rock.reserved };
       });
-      myState.rockets = newState;
+      myState.rocket = newState;
     },
   },
   extraReducers(reduce) {
@@ -42,8 +44,8 @@ const rocketSlice = createSlice({
           rocketImages: rocket.flickr_images[0],
           reserved: false,
         }));
-        console.log(rocketData);
-        isFulfilled.rockets = rocketData;
+        // console.log(rocketData);
+        isFulfilled.rocket = rocketData;
       })
       .addCase(fetchRockets.rejected, (state) => {
         const isRejected = state;

@@ -4,7 +4,7 @@ import { fetchRockets, rocketBooking } from '../Redux/rockets/rockets';
 
 const Rockets = () => {
   const dispatch = useDispatch();
-  const { rockets, status } = useSelector((state) => state.rockets);
+  const { rocket, status } = useSelector((state) => state.rockets);
   useEffect(() => {
     if (status === null) {
       dispatch(fetchRockets());
@@ -24,7 +24,7 @@ const Rockets = () => {
         </div>
       ) : (
         <>
-          {rockets.map((
+          {rocket.map((
             {
               rocketName, rocketDesc, id, rocketImages, reserved,
             },
