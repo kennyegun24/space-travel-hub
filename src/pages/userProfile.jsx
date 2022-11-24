@@ -20,9 +20,9 @@ const Profile = () => {
           </div>
         ) : (
           <ul className="column-items">
-            {missionsMember.map(({ name, id }) => (
-              <li className="column-item" key={id}>
-                {name}
+            {missionsMember.map((mission) => (
+              <li className="column-item" key={mission.mission_id}>
+                {mission.mission_name}
               </li>
             ))}
           </ul>

@@ -5,7 +5,7 @@ const Navbar = () => (
   <div className="nav">
     <div className="navFst">
       <img src={logo} alt="icon" className="logoimg" />
-      <h1>Space Hub</h1>
+      <h1>Space Traveler&apos;s Hub</h1>
     </div>
     <div className="nav-sec">
       <NavLink className="nav-link" to="./">
