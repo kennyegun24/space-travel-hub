@@ -20,7 +20,7 @@ const Rockets = () => {
       {status === 'pending' ? (
         <div className="pending">
           <p className="round" />
-          <p>LOADING...</p>
+          <h3>LOADING...</h3>
         </div>
       ) : (
         <>
@@ -42,7 +42,7 @@ const Rockets = () => {
                   {rocketDesc}
                 </p>
                 <button
-                  type="button"
+                  type="submit"
                   onClick={() => { handleBookings(id); }}
                   className="rocketBtn"
                 >
