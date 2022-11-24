@@ -1,22 +1,21 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
-import store from '../Redux/configureStore';
 import { BrowserRouter as Router } from 'react-router-dom';
+import store from '../Redux/configureStore';
 
-import { fetchMissions } from '../Redux/missions/missions';
-import { toggleMember } from '../Redux/missions/missions';
+import { fetchMissions, toggleMember } from '../Redux/missions/missions';
+
 import Missions from '../pages/missions';
 
 describe('Tests for the missions component/pag', () => {
-  const renderElement = () =>
-    render(
-      <Provider store={store}>
-        <Router>
-          <Missions />
-        </Router>
-      </Provider>
-    );
+  const renderElement = () => render(
+    <Provider store={store}>
+      <Router>
+        <Missions />
+      </Router>
+    </Provider>,
+  );
 
   it('Should render a missions page properly', () => {
     const mission = renderElement();
