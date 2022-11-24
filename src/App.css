@@ -1,4 +1,6 @@
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -6,30 +8,6 @@
 
 body {
   font-family: 'Roboto', 'Poppins', sans-serif;
-}
-
-.reserved {
-  font-weight: 600;
-}
-
-.round {
-  height: 50px;
-  width: 50px;
-  border-right: 5px solid #111;
-  border-left: 5px solid #111;
-  border-bottom: 5px solid #111;
-  border-radius: 50%;
-  animation: round 2s infinite linear;
-}
-
-@keyframes round {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 section {
@@ -56,25 +34,13 @@ button {
 }
 
 button:hover {
-  filter: brightness(12%);
+  scale: 1.02;
 }
+
+/* ............. Header and Hero section ............... */
 
 .logoimg {
   width: 50px;
-}
-
-.pending {
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.pending p {
-  font-size: 20px;
-  font-weight: 500;
-  color: blue;
 }
 
 .nav {
@@ -147,6 +113,34 @@ button:hover {
   gap: 10px;
 }
 
+.reserved {
+  font-weight: 600;
+}
+
+.round {
+  height: 50px;
+  width: 50px;
+  border-right: 5px solid #111;
+  border-left: 5px solid #111;
+  border-bottom: 5px solid #111;
+  border-radius: 50%;
+  animation: round 2s infinite linear;
+}
+
+.pending {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.pending p {
+  font-size: 20px;
+  font-weight: 500;
+  color: blue;
+}
+
 /* ........... Missions Page ............ */
 
 .missions-section {
@@ -158,9 +152,12 @@ button:hover {
   width: 100%;
 }
 
-.missions-table td,
-th {
-  padding: 0.7rem;
+.missions-table th {
+  padding: 1rem 0.5rem;
+}
+
+.missions-table thead {
+  text-align: left;
 }
 
 .missions-table tr:nth-child(2) {
@@ -171,27 +168,50 @@ th {
   background-color: #f2f2f2;
 }
 
-.mission-details td:nth-child(2) {
-  width: 70%;
+tbody td {
+  padding: 1.5rem 0.5rem;
 }
 
-.join-btn {
+.mission-details td:nth-child(1) {
+  font-weight: bold;
+}
+
+.mission-details td:nth-child(2) {
+  width: 63%;
+}
+
+.mission-btn {
   background-color: transparent;
   padding: 0.6rem 0.7rem;
   margin: 0 auto;
   display: block;
-  border: 1.8px solid #666b6f;
   border-radius: 0.3rem;
+}
+
+.join-action {
+  border: 1.8px solid #666b6f;
+}
+
+.leave-action {
+  border: 1.8px solid #e56c76;
+  color: #e56c76;
 }
 
 .member-badge {
   display: block;
   margin: 0 auto;
   width: fit-content;
-  background-color: #6d757d;
-  color: #fff;
+  color: #fff !important;
   padding: 0.15rem 0.5rem;
   border-radius: 0.2rem;
+}
+
+.active-member {
+  background-color: #18a2b8;
+}
+
+.not-active-member {
+  background-color: #6d757d;
 }
 
 /* ............ User Profile ............ */
@@ -230,4 +250,22 @@ th {
 
 .column-item:last-child {
   border-bottom: none;
+}
+
+.reserve-link {
+  color: #0d81ff;
+}
+
+.reserve-link:hover {
+  color: #075ebc;
+}
+
+@keyframes round {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }

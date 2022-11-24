@@ -44,7 +44,6 @@ const rocketSlice = createSlice({
           rocketImages: rocket.flickr_images[0],
           reserved: false,
         }));
-        // console.log(rocketData);
         isFulfilled.rocket = rocketData;
       })
       .addCase(fetchRockets.rejected, (state) => {
