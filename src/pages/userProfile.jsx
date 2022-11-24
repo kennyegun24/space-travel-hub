@@ -8,7 +8,7 @@ const Profile = () => {
   const missionsMember = missionsArray.filter((mission) => mission.member);
 
   return (
-    <section className="missions-container">
+    <section className="userDetails">
       <div className="missions-column">
         <header>My Missions</header>
         {missionsMember.length === 0 ? (
