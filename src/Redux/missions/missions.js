@@ -1,14 +1,14 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
 
 const action = 'missions/fetchMissions';
 
 export const fetchMissions = createAsyncThunk(action, async () => {
   try {
-    const resp = await axios.get('https://api.spacexdata.com/v3/missions');
-    const customData = resp.data.map((mission) => ({
-      id: mission.mission_id,
-      name: mission.mission_name,
+    const resp = await fetch('https://api.spacexdata.com/v3/missions');
+    const data = await resp.json();
+    const customData = data.map((mission) => ({
+      mission_id: mission.mission_id,
+      mission_name: mission.mission_name,
       description: mission.description,
       member: false,
     }));
@@ -32,7 +32,7 @@ const missionSlice = createSlice({
   reducers: {
     toggleMember: (state, action) => {
       const newState = state.missionsArray.map((mission) => {
-        if (mission.id === action.payload) {
+        if (mission.mission_id === action.payload) {
           const objChanged = { ...mission, member: !mission.member };
           return objChanged;
         }

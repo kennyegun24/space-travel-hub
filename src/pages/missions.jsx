@@ -37,8 +37,8 @@ const Missions = () => {
             {missionsArray.map((element) => (
               <SingleMission
                 key={uniqueId()}
-                id={element.id}
-                name={element.name}
+                id={element.mission_id}
+                name={element.mission_name}
                 description={element.description}
                 member={element.member}
               />
