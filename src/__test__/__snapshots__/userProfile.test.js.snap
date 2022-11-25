@@ -1,39 +1,99 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tests for the missions component/pag Should render the missions page properly 1`] = `
+exports[`Tests for the missions component/pag Should render The userProfile page properly 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <section
-        class="missions-section"
+        class="missions-container"
       >
         <div
-          class="pending"
+          class="missions-column"
         >
-          <p
-            class="round"
-          />
-          <p>
-            LOADING...
-          </p>
+          <header>
+            My Missions
+          </header>
+          <div
+            class="no__reservations"
+          >
+            <p>
+              No Reservations Made
+            </p>
+            <a
+              class="reserve-link"
+              href="/missions"
+            >
+              Click to make Reservations
+            </a>
+          </div>
+        </div>
+        <div
+          class="rockets-column"
+        >
+          <header>
+            My Rockets
+          </header>
+          <div
+            class="no__reservations"
+          >
+            <p>
+              No Reservations Made
+            </p>
+            <a
+              class="reserve-link"
+              href="/"
+            >
+              Click to make Reservations
+            </a>
+          </div>
         </div>
       </section>
     </div>
   </body>,
   "container": <div>
     <section
-      class="missions-section"
+      class="missions-container"
     >
       <div
-        class="pending"
+        class="missions-column"
       >
-        <p
-          class="round"
-        />
-        <p>
-          LOADING...
-        </p>
+        <header>
+          My Missions
+        </header>
+        <div
+          class="no__reservations"
+        >
+          <p>
+            No Reservations Made
+          </p>
+          <a
+            class="reserve-link"
+            href="/missions"
+          >
+            Click to make Reservations
+          </a>
+        </div>
+      </div>
+      <div
+        class="rockets-column"
+      >
+        <header>
+          My Rockets
+        </header>
+        <div
+          class="no__reservations"
+        >
+          <p>
+            No Reservations Made
+          </p>
+          <a
+            class="reserve-link"
+            href="/"
+          >
+            Click to make Reservations
+          </a>
+        </div>
       </div>
     </section>
   </div>,
