@@ -32,7 +32,6 @@ const Profile = () => {
       <div className="rockets-column">
         <header>
           My Rockets
-          {rocketReserved.length}
         </header>
         {rocketReserved.length === 0 ? (
           <div className="no__reservations">

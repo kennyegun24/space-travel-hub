@@ -24,6 +24,6 @@ describe('Navbar component testing', () => {
         </Provider>
       </BrowserRouter>,
     );
-    expect(screen.getByRole('heading')).toHaveTextContent("Space Traveler's Hub")
-  })
-})
+    expect(screen.getByRole('heading')).toHaveTextContent("Space Traveler's Hub");
+  });
+});
