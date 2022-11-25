@@ -49,6 +49,10 @@ button:hover {
   justify-content: space-between;
   border-bottom: 1px solid #000;
   padding: 24px 5%;
+  width: 100%;
+  position: fixed;
+  background: #fff;
+  top: 0;
 }
 
 .nav-link {
@@ -92,6 +96,7 @@ button:hover {
   gap: 10px;
   padding: 12px 24px;
   flex-direction: column;
+  margin-top: 100px;
 }
 
 .rocketDivSm {
@@ -145,6 +150,7 @@ button:hover {
 
 .missions-section {
   padding: 1rem 3rem;
+  margin-top: 100px;
 }
 
 .missions-table {
@@ -216,14 +222,15 @@ tbody td {
 
 /* ............ User Profile ............ */
 
-.missions-container {
+.user-container {
   display: flex;
   gap: 2rem;
   padding: 1rem;
   justify-content: center;
+  margin-top: 100px;
 }
 
-.missions-container header {
+.user-container header {
   font-size: 2rem;
   margin-bottom: 0.9rem;
 }
