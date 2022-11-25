@@ -37,17 +37,27 @@ const Rockets = () => {
                 <h2>
                   {rocketName}
                 </h2>
-                {reserved ? <span className="reserved">Reserved </span> : ''}
+                {reserved ? <span className="reserved blue">Reserved </span> : ''}
                 <p>
                   {rocketDesc}
                 </p>
-                <button
-                  type="submit"
-                  onClick={() => { handleBookings(id); }}
-                  className="rocketBtn"
-                >
-                  {reserved ? 'Cancel Reservations' : 'Reserve Rockets'}
-                </button>
+                {reserved ?
+                  <button
+                    type="submit"
+                    onClick={() => { handleBookings(id); }}
+                    className="dull"
+                  >
+                    Cancel Reservations
+                  </button>
+                  :
+                  <button
+                    type="submit"
+                    onClick={() => { handleBookings(id); }}
+                    className="rocketBtn"
+                  >
+                    Reserve Rocket
+                  </button>
+                  }
               </div>
             </div>
           ))}

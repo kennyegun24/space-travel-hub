@@ -113,6 +113,21 @@ button:hover {
   color: #fff;
 }
 
+.dull {
+  background: none;
+  border: 1px solid #111;
+  color: #000;
+  width: fit-content;
+  padding: 10px;
+}
+
+.blue {
+  background: #0d81ff;
+  width: fit-content;
+  color: #fff;
+  padding: 5px;
+}
+
 .rocketDiv {
   display: flex;
   gap: 10px;
