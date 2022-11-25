@@ -8,7 +8,7 @@ const Profile = () => {
   const missionsMember = missionsArray.filter((mission) => mission.member);
 
   return (
-    <section className="missions-container">
+    <section className="user-container">
       <div className="missions-column">
         <header>My Missions</header>
         {missionsMember.length === 0 ? (
@@ -30,7 +30,9 @@ const Profile = () => {
       </div>
 
       <div className="rockets-column">
-        <header>My Rockets</header>
+        <header>
+          My Rockets
+        </header>
         {rocketReserved.length === 0 ? (
           <div className="no__reservations">
             <p>No Reservations Made</p>
