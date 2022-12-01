@@ -15,7 +15,7 @@ const Missions = () => {
       shouldFetch.current = false;
       dispatch(fetchMissions());
     }
-  }, []);
+  }, [loading, dispatch]);
 
   return (
     <section className="missions-section">
