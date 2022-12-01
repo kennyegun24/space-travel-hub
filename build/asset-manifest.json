@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fe19cf4a.css",
+    "main.js": "/static/js/main.cf00317b.js",
+    "static/media/saturn.png": "/static/media/saturn.9cdfeb72e51f0ea04a24.png",
+    "index.html": "/index.html",
+    "main.fe19cf4a.css.map": "/static/css/main.fe19cf4a.css.map",
+    "main.cf00317b.js.map": "/static/js/main.cf00317b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fe19cf4a.css",
+    "static/js/main.cf00317b.js"
+  ]
+}
