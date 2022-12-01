@@ -41,23 +41,25 @@ const Rockets = () => {
                 <p>
                   {rocketDesc}
                 </p>
-                {reserved ?
-                  <button
-                    type="submit"
-                    onClick={() => { handleBookings(id); }}
-                    className="dull"
-                  >
-                    Cancel Reservations
-                  </button>
-                  :
-                  <button
-                    type="submit"
-                    onClick={() => { handleBookings(id); }}
-                    className="rocketBtn"
-                  >
-                    Reserve Rocket
-                  </button>
-                  }
+                {reserved
+                  ? (
+                    <button
+                      type="submit"
+                      onClick={() => { handleBookings(id); }}
+                      className="dull"
+                    >
+                      Cancel Reservations
+                    </button>
+                  )
+                  : (
+                    <button
+                      type="submit"
+                      onClick={() => { handleBookings(id); }}
+                      className="rocketBtn"
+                    >
+                      Reserve Rocket
+                    </button>
+                  )}
               </div>
             </div>
           ))}
