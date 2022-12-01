@@ -29,6 +29,7 @@ Object {
             href="/"
           >
             Rockets
+             0
           </a>
           <a
             class="nav-link"
@@ -74,6 +75,7 @@ Object {
           href="/"
         >
           Rockets
+           0
         </a>
         <a
           class="nav-link"

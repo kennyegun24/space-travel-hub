@@ -12,7 +12,7 @@ export const fetchMissions = createAsyncThunk(action, async () => {
       description: mission.description,
       member: false,
     }));
-
+    /* eslint-disable */
     return customData;
   } catch (error) {
     console.error(error);

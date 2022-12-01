@@ -9,14 +9,13 @@ import { fetchMissions, toggleMember } from '../Redux/missions/missions';
 import Missions from '../pages/missions';
 
 describe('Tests for the missions component/pag', () => {
-  const renderElement = () =>
-    render(
-      <Provider store={store}>
-        <Router>
-          <Missions />
-        </Router>
-      </Provider>
-    );
+  const renderElement = () => render(
+    <Provider store={store}>
+      <Router>
+        <Missions />
+      </Router>
+    </Provider>,
+  );
 
   it('Should render the missions page properly', () => {
     const mission = renderElement();

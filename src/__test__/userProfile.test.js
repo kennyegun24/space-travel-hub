@@ -7,14 +7,13 @@ import store from '../Redux/configureStore';
 import Profile from '../pages/userProfile';
 
 describe('Tests for the missions component/pag', () => {
-  const renderElement = () =>
-    render(
-      <Provider store={store}>
-        <Router>
-          <Profile />
-        </Router>
-      </Provider>
-    );
+  const renderElement = () => render(
+    <Provider store={store}>
+      <Router>
+        <Profile />
+      </Router>
+    </Provider>,
+  );
 
   it('Should render The userProfile page properly', () => {
     const profile = renderElement();
