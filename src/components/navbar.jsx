@@ -5,6 +5,8 @@ import logo from '../assets/saturn.png';
 const Navbar = () => {
   const { rocket } = useSelector((state) => state.rockets);
   const rocketReserved = rocket.filter((stat) => stat.reserved);
+  const { dragon } = useSelector((state) => state.dragons);
+  const dragonReserved = dragon.filter((stat) => stat.reserved);
   return (
     <div className="nav">
       <div className="navFst">
@@ -15,6 +17,10 @@ const Navbar = () => {
         <NavLink className="nav-link" to="./">
           Rockets
           {` ${rocketReserved.length}`}
+        </NavLink>
+        <NavLink className="nav-link" to="./dragons">
+          Dragons
+          {` ${dragonReserved.length}`}
         </NavLink>
         <NavLink className="nav-link" to="./missions">
           Missions
