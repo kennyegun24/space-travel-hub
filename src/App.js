@@ -4,6 +4,7 @@ import Navbar from './components/navbar';
 import Rockets from './components/rockets';
 import Missions from './pages/missions';
 import Profile from './pages/userProfile';
+import Dragons from './components/Dragons';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Rockets />} />
         <Route path="/missions" element={<Missions />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/dragons" element={<Dragons />} />
       </Routes>
     </div>
   );
