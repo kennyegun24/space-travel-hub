@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 const Profile = () => {
   const { rocket } = useSelector((state) => state.rockets);
   const rocketReserved = rocket.filter((stat) => stat.reserved);
+  const { dragon } = useSelector((state) => state.dragons);
+  const dragonReserves = dragon.filter((stat) => stat.reserved);
   const { missionsArray } = useSelector((state) => state.missions);
   const missionsMember = missionsArray.filter((mission) => mission.member);
 
@@ -45,6 +47,28 @@ const Profile = () => {
             {rocketReserved.map(({ id, rocketName }) => (
               <li className="column-item" key={id}>
                 {rocketName}
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+
+      <div className="rockets-column">
+        <header>
+          My Dragons
+        </header>
+        {dragonReserves.length === 0 ? (
+          <div className="no__reservations">
+            <p>No Reservations Made</p>
+            <Link className="reserve-link" to="/dragons">
+              Click to make Reservations
+            </Link>
+          </div>
+        ) : (
+          <ul className="column-items">
+            {dragonReserves.map(({ id, dragonName }) => (
+              <li className="column-item" key={id}>
+                {dragonName}
               </li>
             ))}
           </ul>
